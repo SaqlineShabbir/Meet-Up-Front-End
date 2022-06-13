@@ -1,14 +1,18 @@
 import {
+  BellIcon,
+  ChatIcon,
+  ChevronDownIcon,
   FlagIcon,
   HomeIcon,
   PlayIcon,
   SearchIcon,
   ShoppingCartIcon,
   UserGroupIcon,
-} from "@heroicons/react/outline";
-import Image from "next/image";
-import logo from "../assets/logos/Facebook-logo.png";
-import HeaderIcon from "./HeaderIcon";
+  ViewGridIcon,
+} from '@heroicons/react/outline';
+import Image from 'next/image';
+import logo from '../assets/logos/Facebook-logo.png';
+import HeaderIcon from './HeaderIcon';
 function Header() {
   return (
     <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg-px-5 shadow-md">
@@ -18,7 +22,7 @@ function Header() {
         <div className="flex ml-2 rounded-full items-center  bg-gray-100 p-2">
           <SearchIcon className="h-6 text-gray-600" />
           <input
-            className="flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink"
+            className="hidden md:inline-flex flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink"
             type="text"
             placeholder="Search Meet Up"
           />
@@ -35,6 +39,14 @@ function Header() {
         </div>
       </div>
       {/* right */}
+      <div className="flex items-center sm:space-x-2 justify-end">
+        {/* profil pic */}
+        <p className="font-semibold pr-3 whitespace-nowrap">Sabbir Hossain</p>
+        <ViewGridIcon className="icon" />
+        <ChatIcon className="icon" />
+        <BellIcon className="icon" />
+        <ChevronDownIcon className="icon" />
+      </div>
     </div>
   );
 }
