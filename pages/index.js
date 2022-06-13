@@ -1,15 +1,16 @@
-import Head from 'next/head';
-import Header from '../components/Header';
+import Head from "next/head";
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-screen  bg-gray-100 overflow-hidden">
       <Head>
         <title>Meet Up</title>
       </Head>
       <Header />
-      <main>
-        {/* sidebar */}
+      <main className="flex">
+        <Sidebar />
         {/* newsFeed */}
       </main>
     </div>
