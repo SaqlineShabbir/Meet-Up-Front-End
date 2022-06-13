@@ -1,13 +1,18 @@
-import Head from 'next/head';
+import Head from "next/head";
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-screen  bg-gray-100 overflow-hidden">
       <Head>
         <title>Meet Up</title>
       </Head>
-
-      <h1>Hello next app</h1>
+      <Header />
+      <main className="flex">
+        <Sidebar />
+        {/* newsFeed */}
+      </main>
     </div>
   );
 }
