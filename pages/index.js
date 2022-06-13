@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from '../components/Header';
 
 export default function Home() {
   return (
@@ -6,8 +7,11 @@ export default function Home() {
       <Head>
         <title>Meet Up</title>
       </Head>
-
-      <h1>Hello next app</h1>
+      <Header />
+      <main>
+        {/* sidebar */}
+        {/* newsFeed */}
+      </main>
     </div>
   );
 }
