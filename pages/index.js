@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
+import Widgets from "../components/Widgets";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main className="flex">
         <Sidebar />
         {/* newsFeed */}
+        <Widgets />
       </main>
     </div>
   );
