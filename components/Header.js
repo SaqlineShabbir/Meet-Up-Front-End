@@ -4,6 +4,7 @@ import {
   ChevronDownIcon,
   FlagIcon,
   HomeIcon,
+  LogoutIcon,
   PlayIcon,
   SearchIcon,
   ShoppingCartIcon,
@@ -12,8 +13,10 @@ import {
 } from '@heroicons/react/outline';
 import Image from 'next/image';
 import logo from '../assets/logos/Facebook-logo.png';
+import useFirebase from '../hooks/UseFirebase';
 import HeaderIcon from './HeaderIcon';
 function Header() {
+  const {logOut} = useFirebase()
   return (
     <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg-px-5 shadow-md">
       {/* left */}
@@ -46,6 +49,7 @@ function Header() {
         <ChatIcon className="icon" />
         <BellIcon className="icon" />
         <ChevronDownIcon className="icon" />
+        <LogoutIcon onClick={logOut} className="icon" />
       </div>
     </div>
   );
