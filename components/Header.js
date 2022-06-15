@@ -7,7 +7,6 @@ import {
   FlagIcon,
   HomeIcon,
   LogoutIcon,
-  
   PlayIcon,
   SearchIcon,
   ShoppingCartIcon,
@@ -30,7 +29,7 @@ function Header() {
       <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg-px-5 shadow-md">
       {/* left */}
       <div className="flex items-center">
-        <Image alt="image" src={logo} width={90} height={60} layout="fixed" />
+        <img alt="image" src={logo} width={90} height={60} layout="fixed" />
         <div className="flex ml-2 rounded-full items-center  bg-gray-100 p-2">
           <SearchIcon className="h-6 text-gray-600" />
           <input
@@ -53,6 +52,7 @@ function Header() {
       {/* right */}
       <div className="flex items-center sm:space-x-2 justify-end">
       <img  className="rounded-full cursor-pointer h-12 w-12" src={user?.photoURL} alt="image" />
+        
         <p className="font-semibold pr-3 whitespace-nowrap">
           {user.displayName}
         </p>
@@ -75,38 +75,38 @@ function Header() {
       </div>
       <hr />
       <div className='flex flex-col mt-3'>
-        <div className='flex w-full items-center justify-between p-2 rounded-lg hover:bg-gray-200'>
+        <div className='flex w-full items-center cursor-pointer justify-between p-2 rounded-lg hover:bg-gray-200'>
           <div className='flex items-center gap-2'>
             <CogIcon className='icon' />
-            <h1>Settings & Privacy</h1>
+            <h1 className="cursor-pointer text-lg">Settings & Privacy</h1>
           </div>
           <ChevronRightIcon className='icon bg-white' />
         </div>
-        <div className='flex w-full items-center justify-between p-2 rounded-lg hover:bg-gray-200'>
+        <div className='flex w-full items-center cursor-pointer justify-between p-2 rounded-lg hover:bg-gray-200'>
           <div className='flex items-center gap-2'>
             <QuestionMarkCircleIcon className='icon' />
-            <h1>Help & Support</h1>
+            <h1 className="cursor-pointer text-lg">Help & Support</h1>
           </div>
           <ChevronRightIcon className='icon bg-white' />
         </div>
-        <div className='flex w-full items-center justify-between p-2 rounded-lg hover:bg-gray-200'>
+        <div className='flex w-full items-center cursor-pointer justify-between p-2 rounded-lg hover:bg-gray-200'>
           <div className='flex items-center gap-2'>
             <MoonIcon className='icon' />
-            <h1>Display & Accessibility</h1>
+            <h1 className="cursor-pointer text-lg">Display & Accessibility</h1>
           </div>
           <ChevronRightIcon className='icon bg-white' />
         </div>
-        <div className='flex w-full items-center justify-between p-2 rounded-lg hover:bg-gray-200'>
+        <div className='flex w-full items-center cursor-pointer justify-between p-2 rounded-lg hover:bg-gray-200'>
           <div className='flex items-center gap-2'>
             <ChatAlt2Icon className='icon' />
-            <h1>Give Feedback</h1>
+            <h1 className="cursor-pointer text-lg">Give Feedback</h1>
           </div>
           <ChevronRightIcon className='icon bg-white' />
         </div>
-        <div className='flex w-full items-center justify-between p-2 rounded-lg hover:bg-gray-200'>
+        <div className='flex w-full items-center cursor-pointer justify-between p-2 rounded-lg hover:bg-gray-200'>
           <div onClick={logOut} className='flex items-center gap-2'>
             <LogoutIcon className='icon' />
-            <h1>Log Out</h1>
+            <h1 className="cursor-pointer text-lg">Log Out</h1>
           </div>
           <ChevronRightIcon className='icon bg-white' />
         </div>
