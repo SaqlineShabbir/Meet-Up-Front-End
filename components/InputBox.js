@@ -5,10 +5,10 @@ import {
 } from '@heroicons/react/outline';
 import { useRef } from 'react';
 import useFirebase from '../hooks/UseFirebase';
+
 const InputBox = () => {
   const { user } = useFirebase();
   const inputRef = useRef(null);
-  console.log(user.photoURL);
   const sendPost = (e) => {
     e.preventDefault();
     //  if(!inputRef.current.value) return;
@@ -31,7 +31,7 @@ const InputBox = () => {
             ref={inputRef}
             className="rounded-full h-12 bg-gray-100 flex-grow px-5 focus:outline-none "
             type="text"
-            placeholder={`Whats on your mind, ${user.displayName}`}
+            placeholder={`whats on your mind, ${user.displayName}`}
           />
           <button hidden type="submit" onClick={sendPost}>
             Submit{' '}
