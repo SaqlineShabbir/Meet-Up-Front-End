@@ -26,6 +26,7 @@ import {
       <SidebarRow Icon={UsersIcon} title="suggestions" />
       <SidebarRow Icon={UserGroupIcon} title="All friends" />
       <SidebarRow Icon={CakeIcon} title="Birthdays" />
+      {/* //side bar  */}
      
     </div>
         </div>
