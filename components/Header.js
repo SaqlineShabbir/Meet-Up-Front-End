@@ -45,7 +45,7 @@ function Header() {
       </div>
       {/* right */}
       <div className="flex items-center sm:space-x-2 justify-end">
-        <img src={user.photoUrl} alt="" />
+        <img src={user.photoURL} className="h-8 w-8 rounded-full" alt="" />
         <p className="font-semibold pr-3 whitespace-nowrap">
           {user.displayName}
         </p>
