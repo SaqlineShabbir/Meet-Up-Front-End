@@ -8,7 +8,6 @@ import useFirebase from '../hooks/UseFirebase';
 
 export default function Home() {
   const {user} = useFirebase()
-  console.log(user);
   return (
     <div className="h-screen  bg-gray-100 overflow-hidden">
       {user.email? <div>
