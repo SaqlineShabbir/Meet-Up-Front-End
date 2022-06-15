@@ -12,17 +12,18 @@ import {
   ViewGridIcon,
 } from '@heroicons/react/outline';
 import Image from 'next/image';
-
-import useFirebase from '../hooks/UseFirebase';
 import logo from '../assets/logos/letter-m-logo.webp';
+import useFirebase from '../hooks/UseFirebase';
 import HeaderIcon from './HeaderIcon';
+
 function Header() {
-  const {logOut} = useFirebase()
+  const { logOut, user } = useFirebase();
+  console.log(user);
   return (
     <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg-px-5 shadow-md">
       {/* left */}
       <div className="flex items-center">
-        <Image alt='image' src={logo} width={90} height={60} layout="fixed" />
+        <Image alt="image" src={logo} width={90} height={60} layout="fixed" />
         <div className="flex ml-2 rounded-full items-center  bg-gray-100 p-2">
           <SearchIcon className="h-6 text-gray-600" />
           <input
@@ -44,8 +45,10 @@ function Header() {
       </div>
       {/* right */}
       <div className="flex items-center sm:space-x-2 justify-end">
-        {/* profil pic */}
-        <p className="font-semibold pr-3 whitespace-nowrap">Sabbir Hossain</p>
+        <img src={user.photoUrl} alt="" />
+        <p className="font-semibold pr-3 whitespace-nowrap">
+          {user.displayName}
+        </p>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />
