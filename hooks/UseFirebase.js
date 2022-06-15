@@ -23,16 +23,17 @@ export default function useFirebase() {
   const auth = getAuth();
 
   // create new user with register
-  const registerUser = (email, Password, name) => {
+  const registerUser = (email, Password, name, img) => {
     createUserWithEmailAndPassword(auth, email, Password)
       .then(() => {
         setAuthError("");
 
-        const newUser = { email, displayName: name };
+        const newUser = { email, displayName: name, photoURL: img };
         setUser(newUser);
 
         updateProfile(auth.currentUser, {
           displayName: name,
+          photoURL: img,
         })
           .then(() => {})
           .catch((error) => {

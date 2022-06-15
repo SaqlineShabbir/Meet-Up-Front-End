@@ -3,16 +3,11 @@ import {
   ChevronDoubleDownIcon,
   ClockIcon,
   DesktopComputerIcon,
-  FlagIcon,
-  HomeIcon,
-  PlayIcon,
-  SearchIcon,
   ShoppingBagIcon,
-  ShoppingCartIcon,
   UserGroupIcon,
   UsersIcon,
-} from "@heroicons/react/outline";
-import SidebarRow from "./SidebarRow";
+} from '@heroicons/react/outline';
+import SidebarRow from './SidebarRow';
 
 const Sidebar = () => {
   return (
