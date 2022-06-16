@@ -11,6 +11,7 @@ import useFirebase from '../hooks/UseFirebase';
 export default function Home({posts}) {
   const {user} = useFirebase()
   console.log(posts);
+  const latestPosts = posts.reverse()
   return (
     <div className="h-screen  bg-gray-100 overflow-hidden">
       {user.email? <div>
@@ -23,7 +24,7 @@ export default function Home({posts}) {
         <Sidebar />
         {/* newsFeed */}
         
-        <Feed posts={posts}></Feed>
+        <Feed posts={latestPosts}></Feed>
         
         
         <Widgets />
