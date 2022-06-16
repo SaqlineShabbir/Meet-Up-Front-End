@@ -4,18 +4,19 @@ import {AiOutlineLike} from 'react-icons/ai'
 import {GoComment} from 'react-icons/go';
 import {RiShareForwardLine} from 'react-icons/ri'
 const SinglePost = ({ post }) => {
-  const { name, image, postImage, date } = post;
+  const { name, image, text, postImage, date } = post;
   return (
     <div className="z-50 my-3 shadow-md bg-white rounded-lg  top-0 bottom-0 ">
       <div className="flex p-5 items-center justify-between">
         <div className="flex items-center gap-2">
           <img className="w-10 h-10 rounded-full " src={image} alt="" />
           <div>
-            <h1>{name}</h1>
+            <h1 className="text-xl">{name}</h1>
           </div>
         </div>
         <BsThreeDots />
       </div>
+      <p className="text-lg p-2">{text}</p>
       <img src={postImage} className="block w-full" alt="" />
       <hr />
       <div className="flex justify-around p-2">
