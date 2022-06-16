@@ -3,6 +3,7 @@ import styles from "../styles/modal.module.css";
 import { useForm } from "react-hook-form";
 import UseFirebase from "../hooks/UseFirebase";
 import axios from "axios";
+import {  XIcon } from "@heroicons/react/solid";
 const RegModal = (props) => {
   const [img, setImg] = useState(null)
   const {
@@ -73,21 +74,7 @@ const RegModal = (props) => {
           </div>
         </form>
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className={`h-6 cursor-pointer w-6 ${styles.close}`}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-          onClick={props.onClose}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
+        <XIcon onClick={props.onClose} className={`h-6 cursor-pointer w-6 ${styles.close}`} />
       </div>
     </div>
   );
