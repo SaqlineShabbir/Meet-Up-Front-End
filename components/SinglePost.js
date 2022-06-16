@@ -13,7 +13,8 @@ const SinglePost = ({ post }) => {
         </div>
         <BsThreeDots />
       </div>
-      <img src={postImage} className="block w-80" alt="" />
+      <img src={postImage} className="block w-full" alt="" />
+      <hr />
     </div>
   );
 };
