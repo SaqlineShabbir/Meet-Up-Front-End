@@ -18,9 +18,9 @@ const PostModal = (props) => {
   
   const onSubmit = async (data) => {
    data.name = user.displayName,
-   data.email = "ikholil@mail.com",
+   data.email = user.email,
    data.image = user.photoURL,
-   data.postImage = img,
+   data.postImage = img || '',
    data.date = new Date().toLocaleString()
    console.log(data);
    const res = await fetch("/api/post", {
