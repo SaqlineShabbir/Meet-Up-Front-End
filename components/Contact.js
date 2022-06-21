@@ -6,7 +6,7 @@ function Contact({ src, name }) {
             <img className="rounded-full w-14 h-14"
                 objectFit="cover"
                 src={src}
-                
+
                 layout="fixed" />
             <p>{name}</p>
             <div className="absolute bottom-2 left-7 bg-green-400 h-3 w-3 rounded-full" />

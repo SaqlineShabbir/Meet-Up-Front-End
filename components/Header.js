@@ -81,7 +81,7 @@ function Header() {
           </p>
 
           <ViewGridIcon className="icon" />
-          <ChatIcon className="icon" />
+          <Link href='/messenger'><ChatIcon className="icon" /></Link>
           <BellIcon className="icon" />
           <ChevronDownIcon
             onClick={() => setOpenMenu(!openMenu)}

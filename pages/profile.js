@@ -2,7 +2,8 @@ import Image from 'next/image';
 import cover from '../assets/images/Cap.PNG';
 import Header from '../components/Header';
 import useFirebase from '../hooks/UseFirebase';
-const profile = () => {
+
+const Profile = () => {
   const { user } = useFirebase();
   return (
     <div>
@@ -47,4 +48,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default Profile;
